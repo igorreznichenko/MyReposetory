@@ -1,0 +1,7 @@
+C:\Users\hp\Desktop\Проекти\C# Reports\Dodatk2\Dodatk2\bin\Debug\Dodatk2.exe.config
+C:\Users\hp\Desktop\Проекти\C# Reports\Dodatk2\Dodatk2\bin\Debug\Dodatk2.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\Dodatk2\Dodatk2\bin\Debug\Dodatk2.pdb
+C:\Users\hp\Desktop\Проекти\C# Reports\Dodatk2\Dodatk2\obj\Debug\Dodatk2.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\Dodatk2\Dodatk2\obj\Debug\Dodatk2.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\Dodatk2\Dodatk2\obj\Debug\Dodatk2.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\Dodatk2\Dodatk2\obj\Debug\Dodatk2.pdb

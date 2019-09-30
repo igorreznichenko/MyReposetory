@@ -1,0 +1,7 @@
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2\Array2\bin\Debug\Array2.exe.config
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2\Array2\bin\Debug\Array2.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2\Array2\bin\Debug\Array2.pdb
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2\Array2\obj\Debug\Array2.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2\Array2\obj\Debug\Array2.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2\Array2\obj\Debug\Array2.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2\Array2\obj\Debug\Array2.pdb

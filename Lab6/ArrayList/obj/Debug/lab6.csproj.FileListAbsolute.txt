@@ -1,0 +1,6 @@
+C:\Users\hp\Desktop\Проекти\C# Reports\ArrayList\ArrayList\bin\Debug\ArrayList.exe.config
+C:\Users\hp\Desktop\Проекти\C# Reports\ArrayList\ArrayList\bin\Debug\ArrayList.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\ArrayList\ArrayList\bin\Debug\ArrayList.pdb
+C:\Users\hp\Desktop\Проекти\C# Reports\ArrayList\ArrayList\obj\Debug\lab6.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\ArrayList\ArrayList\obj\Debug\ArrayList.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\ArrayList\ArrayList\obj\Debug\ArrayList.pdb

@@ -1,0 +1,7 @@
+C:\Users\hp\Desktop\Проекти\C# Reports\Chess\Chess\bin\Debug\Chess.exe.config
+C:\Users\hp\Desktop\Проекти\C# Reports\Chess\Chess\bin\Debug\Chess.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\Chess\Chess\bin\Debug\Chess.pdb
+C:\Users\hp\Desktop\Проекти\C# Reports\Chess\Chess\obj\Debug\Chess.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\Chess\Chess\obj\Debug\Chess.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\Chess\Chess\obj\Debug\Chess.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\Chess\Chess\obj\Debug\Chess.pdb

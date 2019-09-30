@@ -1,0 +1,14 @@
+C:\Users\hp\Desktop\Проекти\Програми\C#\Array2dodatk\Array2dodatk\bin\Debug\Array2dodatk.exe.config
+C:\Users\hp\Desktop\Проекти\Програми\C#\Array2dodatk\Array2dodatk\bin\Debug\Array2dodatk.exe
+C:\Users\hp\Desktop\Проекти\Програми\C#\Array2dodatk\Array2dodatk\bin\Debug\Array2dodatk.pdb
+C:\Users\hp\Desktop\Проекти\Програми\C#\Array2dodatk\Array2dodatk\obj\Debug\Array2dodatk.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\Проекти\Програми\C#\Array2dodatk\Array2dodatk\obj\Debug\Array2dodatk.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Проекти\Програми\C#\Array2dodatk\Array2dodatk\obj\Debug\Array2dodatk.exe
+C:\Users\hp\Desktop\Проекти\Програми\C#\Array2dodatk\Array2dodatk\obj\Debug\Array2dodatk.pdb
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2dodatk\Array2dodatk\bin\Debug\Array2dodatk.exe.config
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2dodatk\Array2dodatk\bin\Debug\Array2dodatk.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2dodatk\Array2dodatk\bin\Debug\Array2dodatk.pdb
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2dodatk\Array2dodatk\obj\Debug\Array2dodatk.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2dodatk\Array2dodatk\obj\Debug\Array2dodatk.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2dodatk\Array2dodatk\obj\Debug\Array2dodatk.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\Array2dodatk\Array2dodatk\obj\Debug\Array2dodatk.pdb
