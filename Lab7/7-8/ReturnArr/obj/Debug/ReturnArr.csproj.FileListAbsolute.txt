@@ -1,0 +1,7 @@
+C:\Users\hp\Desktop\Проекти\C# Reports\ReturnArr\ReturnArr\bin\Debug\ReturnArr.exe.config
+C:\Users\hp\Desktop\Проекти\C# Reports\ReturnArr\ReturnArr\bin\Debug\ReturnArr.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\ReturnArr\ReturnArr\bin\Debug\ReturnArr.pdb
+C:\Users\hp\Desktop\Проекти\C# Reports\ReturnArr\ReturnArr\obj\Debug\ReturnArr.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Проекти\C# Reports\ReturnArr\ReturnArr\obj\Debug\ReturnArr.exe
+C:\Users\hp\Desktop\Проекти\C# Reports\ReturnArr\ReturnArr\obj\Debug\ReturnArr.pdb
+C:\Users\hp\Desktop\Проекти\C# Reports\ReturnArr\ReturnArr\obj\Debug\ReturnArr.csprojAssemblyReference.cache
