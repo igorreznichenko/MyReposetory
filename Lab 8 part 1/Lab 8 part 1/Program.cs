@@ -8,14 +8,39 @@ namespace Lab_8_part_1
 {
     class Auto
     {
-        public string name;
-        public string color;
-        public int year;
+        private string Name;
+        private int Year;
+        private string Color;
+
+        public  string name {
+            get
+            {
+                return Name;
+            }
+        }
+
+        public int year
+        {
+            get
+            {
+                return Year;
+            }
+        }
+
+        public string color
+        {
+            get
+            {
+                return Color;
+            }
+        }
+
+        
         public Auto(string Name, string Color, int Year)
         {
-            name = Name;
-            year = Year;
-            color = Color;
+            this.Name = Name;
+            this.Year = Year;
+            this.Color = Color;
         }
     }
     class Garage_Of_Sheikh
