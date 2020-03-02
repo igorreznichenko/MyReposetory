@@ -104,7 +104,7 @@ namespace Game
         public int Check_Winner()
         {
             int i = 0;
-            while (arr[i] == 20)
+            while (arr[i] < 20)
                 i++;
             return i;
         }
