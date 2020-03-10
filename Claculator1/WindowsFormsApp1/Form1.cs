@@ -91,10 +91,17 @@ namespace WindowsFormsApp1
         {
             int i, j;
             char sign;
+            string res;
             string val1 = "";
             string val2 = "";
             double sum;
             i = 0;
+            if (s[0] == '-')
+            {
+                val1 += '-';
+                i++;
+            }
+
             while (!IsSign(s[i]) && i < s.Length)
             {
                 
@@ -109,16 +116,28 @@ namespace WindowsFormsApp1
                 i++;
             }
             if (sign == '*')
+            {
                 sum = double.Parse(val1) * double.Parse(val2);
+                res = double.Parse(val1) < 0 && double.Parse(val2) < 0 ? "+" + sum.ToString() : sum.ToString();
+            }
             else
                 if (sign == '/')
+            {
                 sum = double.Parse(val1) / double.Parse(val2);
+                res = double.Parse(val1) < 0 && double.Parse(val2) < 0 ? "+" + sum.ToString() : sum.ToString();
+            }
             else
                     if (sign == '+')
+            {
                 sum = double.Parse(val1) + double.Parse(val2);
+                res = sum.ToString();
+            }
             else
+            {
                 sum = double.Parse(val1) - double.Parse(val2);
-            return sum.ToString();
+                res = sum.ToString();
+            }
+            return res;
         }
         string DoAllOperations(string s)
         {
@@ -126,16 +145,23 @@ namespace WindowsFormsApp1
             int pos1, pos2;
             string sum;
             i = 0;
-            while(i < s.Length) { 
-                if(s[i] == '/' || s[i] == '*')
+            while(i < s.Length) {
+                if (s[i] == '/' || s[i] == '*')
                 {
+
                     sum = "";
-                    pos1= i-1;
+                    pos1 = i - 1;
                     pos2 = i + 1;
-                    while (pos1 > 0 && !IsSign(s[pos1-1]))
+                    if (s[pos2] == '-')
+                        pos2++;
+                    while (pos1 > 0 && !IsSign(s[pos1]))
                         pos1--;
                     while (pos2 < s.Length-1 && !IsSign(s[pos2+1]))
                         pos2++;
+
+                    if (pos1 > 0 && s[pos1] != '-')
+                    pos1++;
+                    
 
                     for(j = pos1; j <= pos2; j++)
                         sum += s[j];
@@ -149,12 +175,12 @@ namespace WindowsFormsApp1
             i = 0;
             while (i < s.Length)
             {
-                if (s[i] == '+' || s[i] == '-')
+                if ((s[i] == '+' || s[i] == '-') && i != 0)
                 {
                     sum = "";
                     pos1 = i - 1;
                     pos2 = i + 1;
-                    while (pos1 > 0 && !IsSign(s[pos1 - 1]))
+                    while (pos1 > 0)
                         pos1--;
                     while (pos2 < s.Length - 1 && !IsSign(s[pos2 + 1]))
                         pos2++;
@@ -221,7 +247,7 @@ namespace WindowsFormsApp1
         private void button14_Click(object sender, EventArgs e)
         {
             int length = textBox1.Text.Length;
-            if (textBox1.Text.Length == 0 || IsSign(textBox1.Text[length - 1]))
+            if(length != 0 && (textBox1.Text[length-1] == '-' || textBox1.Text[length - 1] == '+'))
                 return;
             this.textBox1.Text += (sender as Button).Text;
         }

@@ -164,7 +164,7 @@ namespace But
                                 button1.Location = new Point(point2.X - step, point2.Y);
                             }
                             else
-                                if(point2.Y > Height)
+                                if(point2.Y > ClientRectangle.Height)
                             {
                                 button1.Location = new Point(point2.X, point2.Y - step);
                             }

@@ -19,7 +19,7 @@ namespace Lab_3_sem4
         public Form1()
         {
             InitializeComponent();
-
+            
         }
 
 

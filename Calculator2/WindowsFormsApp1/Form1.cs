@@ -21,6 +21,20 @@ namespace WindowsFormsApp1
         private void Operation_Button_Click(object sender, EventArgs e)
         {
             int length = textBox1.Text.Length;
+            if((sender as Button).Text =="-" && length != 0 && textBox1.Text[length - 1] != '-')
+            {
+                this.textBox1.Text += (sender as Button).Text;
+                return;
+            }
+            else
+            {
+                if((sender as Button).Text == "-" && length == 0)
+                {
+                    this.textBox1.Text += (sender as Button).Text;
+                    return;
+                }
+            }
+
             if (textBox1.Text.Length == 0 || IsSign(textBox1.Text[length - 1]))
                 return;
             this.textBox1.Text += (sender as Button).Text;
@@ -37,81 +51,116 @@ namespace WindowsFormsApp1
                     return true;
             return false;
         }
-        public string DoOperation(string val1, string val2, char sign)
-        {
-
-            double sum;
-            if (sign == '*')
-                sum = double.Parse(val1) * double.Parse(val2);
-            else
-                if (sign == '/')
-                sum = double.Parse(val1) / double.Parse(val2);
-            else
-                    if (sign == '+')
-                sum = double.Parse(val1) + double.Parse(val2);
-            else
-                sum = double.Parse(val1) - double.Parse(val2);
-            return sum.ToString();
-
-        }
-        string DoAllOperations(string s)
-        {
-            int i, j;
-            int pos1, pos2;
-            string sum1, sum2;
-            char sign;
-            i = 0;
-            while (i < s.Length)
+            public string DoOperation(string s)
             {
-                if (s[i] == '/' || s[i] == '*')
+                int i, j;
+                char sign;
+                string res;
+                string val1 = "";
+                string val2 = "";
+                double sum;
+                i = 0;
+                if (s[0] == '-')
                 {
-                    sum1 = sum2 = "";
-                    pos1 = i - 1;
-                    pos2 = i + 1;
-                    while (pos1 > 0 && !IsSign(s[pos1 - 1]))
-                        pos1--;
-                    while (pos2 < s.Length - 1 && !IsSign(s[pos2 + 1]))
-                        pos2++;
-
-                    for (j = pos1; j < i; j++)
-                        sum1 += s[j];
-                    for (j = i + 1; j <= pos2; j++)
-                        sum2 += s[j];
-                    sign = s[i];
-                    s = s.Remove(pos1, pos2 - pos1 + 1);
-                    sum1 = DoOperation(sum1, sum2, sign);
-                    s = s.Insert(pos1, sum1);
-                    i = pos1;
+                    val1 += '-';
+                    i++;
                 }
+
+                while (!IsSign(s[i]) && i < s.Length)
+                {
+
+                    val1 += s[i];
+                    i++;
+                }
+                sign = s[i];
                 i++;
+                while (i < s.Length)
+                {
+                    val2 += s[i];
+                    i++;
+                }
+                if (sign == '*')
+                {
+                    sum = double.Parse(val1) * double.Parse(val2);
+                    res = double.Parse(val1) < 0 && double.Parse(val2) < 0 ? "+" + sum.ToString() : sum.ToString();
+                }
+                else
+                    if (sign == '/')
+                {
+                    sum = double.Parse(val1) / double.Parse(val2);
+                    res = double.Parse(val1) < 0 && double.Parse(val2) < 0 ? "+" + sum.ToString() : sum.ToString();
+                }
+                else
+                        if (sign == '+')
+                {
+                    sum = double.Parse(val1) + double.Parse(val2);
+                    res = sum.ToString();
+                }
+                else
+                {
+                    sum = double.Parse(val1) - double.Parse(val2);
+                    res = sum.ToString();
+                }
+                return res;
             }
-            i = 0;
-            while (i < s.Length)
+            string DoAllOperations(string s)
             {
-                sum1 = sum2 = "";
-                while (i < s.Length && !IsSign(s[i]))
+                int i, j;
+                int pos1, pos2;
+                string sum;
+                i = 0;
+                while (i < s.Length)
                 {
-                    sum1 += s[i];
-                    i++;
-                }
-                if (i < s.Length)
-                {
-                    sign = s[i];
-                    i++;
-                    while (i < s.Length && !IsSign(s[i]))
+                    if (s[i] == '/' || s[i] == '*')
                     {
-                        sum2 += s[i];
-                        i++;
+
+                        sum = "";
+                        pos1 = i - 1;
+                        pos2 = i + 1;
+                        if (s[pos2] == '-')
+                            pos2++;
+                        while (pos1 > 0 && !IsSign(s[pos1]))
+                            pos1--;
+                        while (pos2 < s.Length - 1 && !IsSign(s[pos2 + 1]))
+                            pos2++;
+
+                        if (pos1 > 0 && s[pos1] != '-')
+                            pos1++;
+
+
+                        for (j = pos1; j <= pos2; j++)
+                            sum += s[j];
+                        s = s.Remove(pos1, pos2 - pos1 + 1);
+                        sum = DoOperation(sum);
+                        s = s.Insert(pos1, sum);
+                        i = pos1;
                     }
-                    sum1 = DoOperation(sum1, sum2, sign);
-                    s = s.Remove(0, i);
-                    s = s.Insert(0, sum1);
-                    i = 0;
+                    i++;
                 }
+                i = 0;
+                while (i < s.Length)
+                {
+                    if ((s[i] == '+' || s[i] == '-') && i != 0)
+                    {
+                        sum = "";
+                        pos1 = i - 1;
+                        pos2 = i + 1;
+                        while (pos1 > 0)
+                            pos1--;
+                        while (pos2 < s.Length - 1 && !IsSign(s[pos2 + 1]))
+                            pos2++;
+                        for (j = pos1; j <= pos2; j++)
+                            sum += s[j];
+                        s = s.Remove(pos1, pos2 - pos1 + 1);
+                        sum = DoOperation(sum);
+                        s = s.Insert(pos1, sum);
+                        i = pos1;
+                    }
+                    i++;
+                }
+                return s;
             }
-            return s;
-        }
-        private void Do_Operation(object sender, EventArgs e)
+            private void Do_Operation(object sender, EventArgs e)
         {
             int length = textBox1.Text.Length;
             if (textBox1.TextLength == 0)
