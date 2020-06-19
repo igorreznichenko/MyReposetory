@@ -119,8 +119,8 @@ namespace But
                             }
                         }
                     }
-                    button1.Width -= 1;
-                    button1.Height -= 1;
+                    //button1.Width -= 1;
+                    //button1.Height -= 1;
                 }
             }
             //end if-else block
@@ -172,6 +172,46 @@ namespace But
                     }
                 }
             }
+
+            point1 = new Point(button1.Location.X, button1.Location.Y);
+            point2 = new Point(button1.Location.X + button1.Width, button1.Location.Y);
+            point3 = new Point(button1.Location.X, button1.Location.Y + button1.Height);
+            point4 = new Point(button1.Location.X + button1.Width, button1.Location.Y + button1.Height);
+
+
+            Point cpoint1 = new Point(button2.Location.X, button2.Location.Y);
+            Point cpoint2 = new Point(button2.Location.X + button2.Width, button2.Location.Y);
+            Point cpoint3 = new Point(button2.Location.X, button2.Location.Y+button2.Height);
+            Point cpoint4 = new Point(button2.Location.X + button2.Width, button2.Location.Y + button2.Height);
+            if(point3.Y == cpoint1.Y && (cpoint1.X >= point3.X && cpoint1.X <= point4.X || cpoint2.X >= point3.X && cpoint2.X <= point4.X))
+            {
+                button1.Location = new Point(point1.X, point1.Y - 60);
+            }
+            else
+            {
+                 if(cpoint3.Y == point1.Y && (cpoint3.X >= point1.X && cpoint3.X <= point2.X || cpoint4.X >= point1.X && cpoint4.X <= point2.X))
+                {
+                    button1.Location = new Point(point1.X, point1.Y + 40);
+                }
+                else
+                {
+                    if(cpoint1.X == point2.X && (cpoint1.Y >= point1.Y && cpoint1.Y <= point3.Y || cpoint3.Y >= point1.Y && cpoint3.Y <= point4.Y))
+                    {
+                        button1.Location = new Point(point1.X-40, point1.Y);
+
+                    }
+                    else
+                    {
+                        if(cpoint2.X == point1.X && (cpoint2.Y >= point2.Y && cpoint2.Y <= point4.Y || cpoint4.Y >= point2.Y && cpoint3.Y <= point4.Y))
+                        {
+                            button1.Location = new Point(point1.X + 40, point1.Y);
+
+                        }
+                    }
+                }
+
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -184,7 +224,10 @@ namespace But
             this.Close();
         }
 
-   
+        private void button1_Enter(object sender, EventArgs e)
+        {
+            button2.Focus();
+        }
     }
 
      

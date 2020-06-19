@@ -19,7 +19,13 @@ namespace Lab_3_sem4
         public Form1()
         {
             InitializeComponent();
-            
+            tabPage2.LostFocus += GetFocus;
+        }
+
+        private void GetFocus(object sender, EventArgs e)
+        {
+            tabPage2.Focus();
+
         }
 
 
@@ -90,7 +96,10 @@ namespace Lab_3_sem4
         private void ChangeTab(object sender, EventArgs e)
         {
             if (tabControl1.SelectedIndex == 1)
+            {
                 MixNumbers();
+                tabPage2.Focus();
+            }
             if (!timer1.Enabled)
             {
                 timer1.Start();
@@ -130,7 +139,6 @@ namespace Lab_3_sem4
             }
             else
                 Reset();
-                
             
             if (counter == 17)
                 WriteRes();               
